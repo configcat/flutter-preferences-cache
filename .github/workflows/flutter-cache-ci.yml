@@ -50,11 +50,29 @@ jobs:
       - name: Run tests
         run: flutter test
 
-  test:
+  test-stable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run tests
+        run: flutter test
+
+  test-dev:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        channel: [ 'stable', 'beta', 'dev' ]
+        channel: [ 'beta', 'dev' ]
+      fail-fast: false
     steps:
       - uses: actions/checkout@v3
 
@@ -68,10 +86,11 @@ jobs:
         run: flutter pub get
 
       - name: Run tests
+        continue-on-error: true
         run: flutter test
 
   publish-dry-run:
-    needs: [analyze-format, test-min, test]
+    needs: [analyze-format, test-min, test-stable, test-dev]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
