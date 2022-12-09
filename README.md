@@ -13,7 +13,7 @@ ConfigCat is a <a href="https://configcat.com" target="_blank">hosted feature fl
 
 ## Getting started
 
-### 1. Install the ConfigCat Flutter Cache package along with the ConfigCat Flutter SDK
+### 1. Install the package along with the [ConfigCat Dart (Flutter) SDK](https://github.com/configcat/dart-sdk)
 ```bash
 flutter pub add configcat_cache
 flutter pub add configcat_client
