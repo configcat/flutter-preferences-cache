@@ -1,0 +1,21 @@
+name: configcat_cache
+description: >-
+  Cache implementation for ConfigCat Dart (Flutter) SDK based on shared_preferences. ConfigCat is a hosted feature flag service that lets you manage feature toggles across frontend, backend, mobile, desktop apps.
+version: 2.3.0
+homepage: https://github.com/configcat/flutter-cache
+repository: https://github.com/configcat/flutter-cache
+issue_tracker: https://github.com/configcat/flutter-cache/issues
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+  flutter: ">=2.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.0.15
+  configcat_client: ^2.3.0
+
+dev_dependencies:
+  test: ^1.21.4
+  lints: ">=1.0.1 <3.0.0"
