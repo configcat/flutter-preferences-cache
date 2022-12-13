@@ -5,7 +5,14 @@
 
 https://configcat.com
 
-Cache implementation for [ConfigCat Dart (Flutter) SDK](https://configcat.com/docs/sdk-reference/dart/) based on [shared_preferences](https://pub.dev/packages/shared_preferences).
+Flutter Cache implementation for [ConfigCat Dart (Flutter) SDK](https://configcat.com/docs/sdk-reference/dart/). It provides caching for Flutter applications on various platforms through [shared_preferences](https://pub.dev/packages/shared_preferences).
+
+Cache storage location by platform:
+- **Web**: Browser `LocalStorage`.
+- **iOS/macOS**: `NSUserDefaults`.
+- **Android**: `SharedPreferences`.
+- **Linux**: File in `XDG_DATA_HOME` directory.
+- **Windows**: File in roaming `AppData` directory.
 
 ConfigCat is a feature flag and configuration management service that lets you separate feature releases from code deployments. You can turn features ON or OFF using the <a href="https://app.configcat.com" target="_blank">ConfigCat Dashboard</a> even after they are deployed. ConfigCat lets you target specific groups of users based on region, email, or any other custom user attribute.
 

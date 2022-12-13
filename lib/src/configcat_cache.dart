@@ -6,7 +6,7 @@ class ConfigCatPreferencesCache extends ConfigCatCache {
   @override
   Future<String> read(String key) async {
     final sharedPreferences = await SharedPreferences.getInstance();
-    return sharedPreferences.getString(key) ?? "";
+    return sharedPreferences.getString(key) ?? '';
   }
 
   @override

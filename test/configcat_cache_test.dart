@@ -15,9 +15,9 @@ void main() {
           '{"keyBool":{"v":true,"t":0,"p":[],"r":[],"i":"eddc7af8"},"keyDouble":{"v":120.121238476,"t":3,"p":[],"r":[],"i":"675817ef"},"keyInteger":{"v":1248,"t":2,"p":[],"r":[],"i":"dd641a2c"},"keySampleText":{"v":"This text came from ConfigCat","t":1,"p":[],"r":[],"i":"eda16475"},"keyString":{"v":"Lorem ipsum","t":1,"p":[],"r":[],"i":"bc200774"}}}';
       final body =
           '{"p":{"u":"https://cdn-global.configcat.com","r":0},"f":$config';
-      final sdkKey = "PKDVCLf-Hq-h-kCzMp-L7Q/PaDVCFk9EpmD6sLpGLltTA";
+      final sdkKey = 'PKDVCLf-Hq-h-kCzMp-L7Q/PaDVCFk9EpmD6sLpGLltTA';
       final path =
-          "https://cdn-global.configcat.com/configuration-files/$sdkKey/config_v5.json";
+          'https://cdn-global.configcat.com/configuration-files/$sdkKey/config_v5.json';
       final sharedPreferences = await SharedPreferences.getInstance();
       await sharedPreferences.clear();
 
