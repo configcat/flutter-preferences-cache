@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:configcat_cache/configcat_cache.dart';
+import 'package:configcat_preferences_cache/configcat_preferences_cache.dart';
 import 'package:configcat_client/configcat_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';

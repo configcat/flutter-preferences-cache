@@ -1,7 +1,7 @@
-# ConfigCat Flutter Cache
+# ConfigCat Flutter Preferences Cache
 
-[![pub package](https://img.shields.io/pub/v/configcat_cache.svg)](https://pub.dev/packages/configcat_cache)
-[![Dart CI](https://github.com/configcat/flutter-cache/actions/workflows/flutter-cache-ci.yml/badge.svg?branch=main)](https://github.com/configcat/flutter-cache/actions/workflows/flutter-cache-ci.yml)
+[![pub package](https://img.shields.io/pub/v/configcat_preferences_cache.svg)](https://pub.dev/packages/configcat_preferences_cache)
+[![Dart CI](https://github.com/configcat/flutter-preferences-cache/actions/workflows/flutter-cache-ci.yml/badge.svg?branch=main)](https://github.com/configcat/flutter-preferences-cache/actions/workflows/flutter-cache-ci.yml)
 
 https://configcat.com
 
@@ -22,14 +22,14 @@ ConfigCat is a <a href="https://configcat.com" target="_blank">hosted feature fl
 
 ### 1. Install the package along with the [ConfigCat Dart (Flutter) SDK](https://configcat.com/docs/sdk-reference/dart/)
 ```bash
-flutter pub add configcat_cache
+flutter pub add configcat_preferences_cache
 flutter pub add configcat_client
 ```
 
 ### 2. Import the *configcat_client* and *configcat_cache* package in your application code
 ```dart
+import 'package:configcat_preferences_cache/configcat_preferences_cache.dart';
 import 'package:configcat_client/configcat_client.dart';
-import 'package:configcat_cache/configcat_cache.dart';
 ```
 
 ### 3. Use `ConfigCatPreferencesCache` at the ConfigCat SDK's initialization

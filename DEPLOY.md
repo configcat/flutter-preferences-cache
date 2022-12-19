@@ -22,7 +22,7 @@ Use the **same version** for the git tag as in the properties file.
        ```
 - Via Github release
 
-  Create a new [Github release](https://github.com/configcat/flutter-cache/releases) with a new version tag and release
+  Create a new [Github release](https://github.com/configcat/flutter-preferences-cache/releases) with a new version tag and release
   notes.
 
 ## Update import examples in local README.md
