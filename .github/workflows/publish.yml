@@ -9,15 +9,10 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    container:
+      image: google/dart:latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          cache: true
-
       - name: Setup credentials
         run: |
           mkdir -p ~/.pub-cache 
@@ -31,4 +26,4 @@ jobs:
           }
           EOF
       - name: Publish package
-        run: flutter pub publish -f
+        run: pub publish -f
