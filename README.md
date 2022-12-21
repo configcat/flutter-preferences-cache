@@ -9,7 +9,7 @@ Flutter Cache implementation for [ConfigCat Dart (Flutter) SDK](https://configca
 
 Cache storage location by platform:
 - **Web**: Browser `LocalStorage`.
-- **iOS/macOS**: `NSUserDefaults`.
+- **iOS / macOS**: `NSUserDefaults`.
 - **Android**: `SharedPreferences`.
 - **Linux**: File in `XDG_DATA_HOME` directory.
 - **Windows**: File in roaming `AppData` directory.
