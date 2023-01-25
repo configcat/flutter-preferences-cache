@@ -7,6 +7,7 @@ import 'package:http_mock_adapter/http_mock_adapter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  SharedPreferences.setMockInitialValues({});
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('Cache Tests', () {
