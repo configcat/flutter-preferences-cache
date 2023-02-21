@@ -69,6 +69,7 @@ jobs:
 
   test-dev:
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
       matrix:
         channel: [ 'beta', 'dev' ]
@@ -86,7 +87,6 @@ jobs:
         run: flutter pub get
 
       - name: Run tests
-        continue-on-error: true
         run: flutter test
 
   publish-dry-run:
