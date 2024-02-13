@@ -33,6 +33,26 @@ jobs:
     - name: Analyze project source
       run: flutter analyze
 
+  test-channel:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        channel: [ 'beta', 'stable' ]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ matrix.channel }}
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run tests
+        run: flutter test
+
   test-min:
     runs-on: ubuntu-latest
     steps:
@@ -50,47 +70,8 @@ jobs:
       - name: Run tests
         run: flutter test
 
-  test-stable:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          cache: true
-
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Run tests
-        run: flutter test
-
-  test-dev:
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    strategy:
-      matrix:
-        channel: [ 'beta', 'dev' ]
-      fail-fast: false
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: ${{ matrix.channel }}
-          cache: true
-
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Run tests
-        run: flutter test
-
   publish-dry-run:
-    needs: [analyze-format, test-min, test-stable, test-dev]
+    needs: [ analyze-format, test-channel, test-min ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
