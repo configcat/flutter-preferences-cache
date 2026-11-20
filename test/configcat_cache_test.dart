@@ -23,14 +23,15 @@ void main() {
       final sharedPreferences = await SharedPreferences.getInstance();
       await sharedPreferences.clear();
 
+      final testAdapter = HttpTestAdapter();
       final client = ConfigCatClient.get(
           sdkKey: sdkKey,
           options: ConfigCatOptions(
               cache: ConfigCatPreferencesCache(),
-              pollingMode: PollingMode.manualPoll()));
+              pollingMode: PollingMode.manualPoll(),
+              httpClient: testAdapter));
 
-      final dioAdapter = HttpTestAdapter(client.httpClient);
-      dioAdapter.enqueueResponse(path, 200, jsonDecode(body));
+      testAdapter.enqueueResponse(path, 200, jsonDecode(body));
 
       await client.forceRefresh();
 

@@ -1,20 +1,20 @@
 name: configcat_preferences_cache
 description: >-
   Flutter Cache implementation for ConfigCat Dart (Flutter) SDK based on shared_preferences.
-version: 2.1.0
+version: 3.0.0
 homepage: https://configcat.com/docs/sdk-reference/dart
 repository: https://github.com/configcat/flutter-preferences-cache
 issue_tracker: https://github.com/configcat/flutter-preferences-cache/issues
 
 environment:
-  sdk: ">=2.19.0 <4.0.0"
+  sdk: ">=3.4.0 <4.0.0"
   flutter: ">=3.7.0"
 
 dependencies:
   flutter:
     sdk: flutter
   shared_preferences: ^2.1.1
-  configcat_client: ^5.1.0
+  configcat_client: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -22,4 +22,4 @@ dev_dependencies:
 
   flutter_lints: ">=2.0.1 <7.0.0"
   convert: ^3.1.1
-  dio: ^5.0.0
+  http: ^1.6.0
