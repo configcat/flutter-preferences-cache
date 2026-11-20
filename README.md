@@ -3,8 +3,6 @@
 [![pub package](https://img.shields.io/pub/v/configcat_preferences_cache.svg)](https://pub.dev/packages/configcat_preferences_cache)
 [![Dart CI](https://github.com/configcat/flutter-preferences-cache/actions/workflows/flutter-cache-ci.yml/badge.svg?branch=main)](https://github.com/configcat/flutter-preferences-cache/actions/workflows/flutter-cache-ci.yml)
 
-https://configcat.com
-
 Flutter Cache implementation for [ConfigCat Dart (Flutter) SDK](https://configcat.com/docs/sdk-reference/dart/). It provides caching for Flutter applications on various platforms through [shared_preferences](https://pub.dev/packages/shared_preferences).
 
 Cache storage location by platform:
